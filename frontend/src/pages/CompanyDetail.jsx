@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { API_ENDPOINTS } from '../config'
 
 export default function CompanyDetail() {
   const { companyName } = useParams()
@@ -12,7 +13,7 @@ export default function CompanyDetail() {
 
   const loadCompanyData = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:8001/api/company/${companyName}`)
+      const response = await fetch(API_ENDPOINTS.company(companyName))
       const json = await response.json()
       setData(json)
     } catch (error) {

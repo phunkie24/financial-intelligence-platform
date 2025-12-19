@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_ENDPOINTS } from '../config'
 
 export default function DocumentAnalyzer() {
   const [uploading, setUploading] = useState(false)
@@ -13,7 +14,7 @@ export default function DocumentAnalyzer() {
 
   const loadDocuments = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/documents')
+      const response = await fetch(API_ENDPOINTS.documents)
       const data = await response.json()
       setDocuments(data.documents || [])
     } catch (error) {

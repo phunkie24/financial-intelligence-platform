@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_ENDPOINTS } from '../config'
 
 export default function CompareReports() {
   const [documents, setDocuments] = useState([])
@@ -11,7 +12,7 @@ export default function CompareReports() {
 
   const loadDocuments = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/documents')
+      const response = await fetch(API_ENDPOINTS.documents)
       const data = await response.json()
       setDocuments(data.documents.filter(doc => doc.processed))
     } catch (error) {

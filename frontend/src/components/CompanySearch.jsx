@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { API_ENDPOINTS, buildUrl } from '../config'
 
 export default function CompanySearch() {
   const [query, setQuery] = useState('')
@@ -17,7 +18,7 @@ export default function CompanySearch() {
 
     setSearching(true)
     try {
-      const response = await fetch(`http://127.0.0.1:8001/api/search?q=${value}`)
+      const response = await fetch(buildUrl(API_ENDPOINTS.search, { q: value }))
       const data = await response.json()
       setResults(data.results || [])
     } catch (error) {

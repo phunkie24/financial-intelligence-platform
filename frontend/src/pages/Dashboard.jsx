@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { API_ENDPOINTS } from '../config'
 
 export default function Dashboard() {
   const [stats, setStats] = useState(null)
@@ -13,9 +14,9 @@ export default function Dashboard() {
   const loadData = async () => {
     try {
       const [statsRes, companiesRes, docsRes] = await Promise.all([
-        fetch('http://127.0.0.1:8001/api/stats').then(r => r.json()),
-        fetch('http://127.0.0.1:8001/api/companies?limit=5').then(r => r.json()),
-        fetch('http://127.0.0.1:8001/api/documents?limit=3').then(r => r.json())
+        fetch(API_ENDPOINTS.stats).then(r => r.json()),
+        fetch(API_ENDPOINTS.companies).then(r => r.json()),
+        fetch(API_ENDPOINTS.documents).then(r => r.json())
       ])
       
       setStats(statsRes.stats)

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Tesla",
+    "mention_count": 25,
+    "avg_sentiment": -0.15,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "Apple",
+    "mention_count": 22,
+    "avg_sentiment": 0.45,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "Microsoft",
+    "mention_count": 19,
+    "avg_sentiment": 0.32,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "Amazon",
+    "mention_count": 17,
+    "avg_sentiment": 0.12,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "Google",
+    "mention_count": 15,
+    "avg_sentiment": 0.28,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "Meta",
+    "mention_count": 13,
+    "avg_sentiment": -0.08,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "Netflix",
+    "mention_count": 11,
+    "avg_sentiment": 0.18,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "Nvidia",
+    "mention_count": 9,
+    "avg_sentiment": 0.52,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "Intel",
+    "mention_count": 8,
+    "avg_sentiment": 0.05,
+    "created_at": "2025-12-18T22:09:35.303691"
+  },
+  {
+    "name": "AMD",
+    "mention_count": 7,
+    "avg_sentiment": 0.35,
+    "created_at": "2025-12-18T22:09:35.303691"
+  }
+]

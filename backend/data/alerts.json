@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "company": "Tesla",
+    "type": "risk",
+    "severity": "HIGH",
+    "message": "Negative sentiment spike detected in recent news coverage",
+    "created_at": "2025-12-18T22:09:35.303691",
+    "is_read": false
+  },
+  {
+    "id": 2,
+    "company": "Meta",
+    "type": "risk",
+    "severity": "MEDIUM",
+    "message": "Regulatory concerns mentioned in multiple articles",
+    "created_at": "2025-12-18T22:09:35.303691",
+    "is_read": false
+  },
+  {
+    "id": 3,
+    "company": "Netflix",
+    "type": "opportunity",
+    "severity": "LOW",
+    "message": "Positive earnings surprise reported",
+    "created_at": "2025-12-18T22:09:35.303691",
+    "is_read": false
+  }
+]

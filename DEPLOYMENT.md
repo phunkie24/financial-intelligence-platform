@@ -1,63 +1,54 @@
-# 🚀 Deployment Checklist
+# 🚀 Quick Deployment Guide
 
-## Pre-Deployment
+## Deploy Everything from GitHub (Free & Easy)
 
-- [ ] All code committed to GitHub
-- [ ] .env.example created (no secrets!)
-- [ ] README.md complete
-- [ ] Demo video recorded and uploaded
-- [ ] HuggingFace models uploaded
+### ✅ **Backend: Render.com (Auto-deploys from GitHub)**
 
-## Backend Deployment (Railway)
+1. **Sign up**: https://render.com (use your GitHub account)
+2. **New Web Service** → Connect `phunkie24/financial-intelligence-platform`
+3. **Configure**:
+   - **Root Directory**: `backend`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `uvicorn app:app --host 0.0.0.0 --port $PORT`
+   - **Environment**: Python 3.11
+4. **Add Environment Variables**:
+   ```
+   QIANFAN_AK=your_baidu_key
+   QIANFAN_SK=your_baidu_secret
+   ```
+5. **Deploy** → Render auto-builds from your GitHub repo!
 
-- [ ] Create Railway account
-- [ ] Connect GitHub repository
-- [ ] Add environment variables:
-  - QIANFAN_AK
-  - QIANFAN_SK
-  - DATABASE_URL (auto-generated)
-- [ ] Deploy
-- [ ] Test /api/health endpoint
-- [ ] Note backend URL
-
-## Frontend Deployment (GitHub Pages)
-
-- [ ] Update vite.config.js with correct base path
-- [ ] Update API URL in frontend code
-- [ ] Run: `npm run deploy`
-- [ ] Enable GitHub Pages in repo settings
-- [ ] Test deployment
-
-## Testing
-
-- [ ] Upload test document
-- [ ] Verify OCR extraction
-- [ ] Check ERNIE analysis
-- [ ] Test Q&A feature
-- [ ] Test comparison
-- [ ] Verify real-time news (if enabled)
-
-## Submission
-
-### CodeCraze Hackathon
-- [ ] Submit GitHub repository URL
-- [ ] Submit live demo URL
-- [ ] Submit demo video URL
-- [ ] Fill project description
-
-### ERNIE Challenge
-- [ ] Submit GitHub repository URL
-- [ ] Submit HuggingFace model URLs
-- [ ] Submit demo video URL
-- [ ] Fill technical documentation
-
-## Post-Deployment
-
-- [ ] Monitor logs for errors
-- [ ] Test on mobile devices
-- [ ] Get user feedback
-- [ ] Update README with any fixes
+**Result**: Get URL like `https://your-app.onrender.com`
 
 ---
 
-**Congratulations! You're ready to win! 🏆**
+### ✅ **Frontend: Vercel (Auto-deploys from GitHub)**
+
+1. **Sign up**: https://vercel.com (use your GitHub account)
+2. **Import Project** → Select `phunkie24/financial-intelligence-platform`
+3. **Configure**:
+   - **Framework**: Vite
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. **Add Environment Variable**:
+   ```
+   VITE_API_URL=https://your-app.onrender.com
+   ```
+5. **Deploy** → Vercel auto-builds from GitHub!
+
+**Result**: Get URL like `https://your-app.vercel.app`
+
+---
+
+## 🎯 **Done!**
+
+Every time you push to GitHub:
+- ✅ Render automatically rebuilds backend
+- ✅ Vercel automatically rebuilds frontend
+- ✅ Both are FREE
+
+**Show judges**:
+- Live Frontend: `https://your-app.vercel.app`
+- Live Backend API: `https://your-app.onrender.com/docs`
+- Agent Status: `https://your-app.onrender.com/api/agents/status`

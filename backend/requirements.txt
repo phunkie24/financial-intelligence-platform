@@ -6,7 +6,16 @@ python-multipart==0.0.6
 # Database
 sqlalchemy==2.0.23
 
-# OCR (Open Source)
+# ⭐ CAMEL-AI Multi-Agent Framework (REQUIRED FOR HACKATHON)
+camel-ai[all]==0.2.1
+openai==1.12.0  # CAMEL backend support
+langchain==0.1.9  # Additional agent tools
+langchain-community==0.0.24
+
+# ⭐ Baidu ERNIE-4.5 Integration (REQUIRED FOR HACKATHON)
+qianfan==0.3.5  # Baidu Qianfan SDK for ERNIE-4.5
+
+# OCR (Open Source - REQUIRED FOR HACKATHON)
 paddleocr==2.8.1
 paddlepaddle==3.2.2
 opencv-python==4.10.0.84
@@ -29,6 +38,17 @@ nltk==3.8.1
 PyPDF2==3.0.1
 pdfplumber==0.10.3
 
+# Multi-Agent Task Management
+asyncio-mqtt==0.16.1
+aiohttp==3.9.1
+websockets==12.0
+
+# Monitoring & Logging
+prometheus-client==0.19.0
+structlog==24.1.0
+
 # Utilities
 python-dotenv==1.0.0
 pydantic-settings==2.1.0
+tenacity==8.2.3  # Retry logic for agent communication
+httpx==0.26.0  # Async HTTP client

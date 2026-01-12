@@ -1,24 +1,39 @@
 # 💼 Financial Intelligence Platform
-
-AI-Powered Financial Document Analysis with **ERNIE 4.5** & **PaddleOCR**
+## 🤖 CAMEL-AI Multi-Agent System for Financial Analysis
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![CAMEL-AI](https://img.shields.io/badge/CAMEL--AI-Multi--Agent-orange.svg)](https://github.com/camel-ai/camel)
+[![ERNIE 4.5](https://img.shields.io/badge/ERNIE-4.5-blue.svg)](https://cloud.baidu.com/product/wenxinworkshop)
 [![React 18](https://img.shields.io/badge/react-18-61DAFB.svg)](https://reactjs.org/)
 
 ## 🏆 Built For
 
-- **CodeCraze Hackathon 2025** - Financial News Monitoring
-- **ERNIE & PaddlePaddle Challenge** - AI Document Analysis
+- **CAMEL-AI Multi-Agent Hackathon 2025** - Multi-Agent Financial Intelligence System
+- **ERNIE & PaddlePaddle Challenge** - AI Document Analysis with ERNIE-4.5
 
 ## 🎯 Overview
 
-Combines real-time financial news monitoring with AI-powered document analysis. Upload earnings reports, 10-Ks, or investor presentations and get instant insights powered by:
+**A production-ready multi-agent system** built with **CAMEL-AI** that orchestrates 7 specialized agents to provide intelligent financial document analysis, risk assessment, and real-time monitoring.
 
+### 🤖 Multi-Agent Architecture
+
+This system uses **CAMEL-AI framework** to coordinate specialized agents that communicate and collaborate:
+
+1. **Orchestrator Agent** - Task planning and multi-agent coordination
+2. **Document Processor Agent** - OCR extraction with PaddleOCR
+3. **Financial Analyst Agent** - Metric extraction with ERNIE-4.5
+4. **Risk Assessor Agent** - Risk scoring and alert generation
+5. **Knowledge Manager Agent** - RAG-powered Q&A
+6. **News Monitor Agent** - Autonomous real-time surveillance
+7. **Critic Agent** - Quality assurance and validation
+
+### 🔥 Key Technologies
+
+- 🤖 **CAMEL-AI** - Multi-agent coordination and communication
 - 📸 **PaddleOCR** - Extract text, tables, and charts from PDFs/images
-- 🤖 **ERNIE 4.5** - Analyze sentiment, risks, and financial metrics
-- 🎓 **Fine-tuned Models** - Custom LoRA & QLoRA models for financial domain
-- 💬 **RAG Q&A** - Ask questions about documents with context-aware AI
+- 🧠 **ERNIE 4.5** - Advanced financial analysis and insights
+- 💬 **RAG Q&A** - Semantic search with ChromaDB
 
 ## ✨ Features
 
@@ -55,36 +70,49 @@ Combines real-time financial news monitoring with AI-powered document analysis. 
 - PaddleOCR-Financial (QLoRA for tables/charts)
 - Hosted on HuggingFace Hub
 
-## 🏗️ Architecture
+## 🏗️ Multi-Agent Architecture
+
 ```
-┌─────────────────────────────────────────────┐
-│        Frontend (React + Vite)              │
-│  • Dashboard  • Document Upload             │
-│  • Q&A Chat   • Comparison View             │
-└─────────────┬───────────────────────────────┘
-              │ REST API + WebSocket
-┌─────────────┴───────────────────────────────┐
-│        Backend (FastAPI)                     │
-│  • Document Processing                       │
-│  • ERNIE API Integration                     │
-│  • RAG Engine (ChromaDB)                     │
-└─────────────┬───────────────────────────────┘
-              │
-┌─────────────┴───────────────────────────────┐
-│        AI/ML Layer                           │
-│  • PaddleOCR (Text Extraction)              │
-│  • ERNIE 4.5 (Analysis)                     │
-│  • Fine-tuned LoRA Models                   │
-│  • Vector Embeddings (sentence-transformers)│
-└─────────────┬───────────────────────────────┘
-              │
-┌─────────────┴───────────────────────────────┐
-│        Data Layer                            │
-│  • PostgreSQL (Documents & Analysis)         │
-│  • ChromaDB (Vector Store)                   │
-│  • File Storage (PDFs/Images)               │
-└─────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                   ORCHESTRATOR AGENT                        │
+│         (CAMEL-AI Task Planning & Coordination)             │
+│         • Decomposes user requests into subtasks            │
+│         • Assigns tasks to specialized agents               │
+│         • Manages dependencies and workflow                 │
+└──────────────┬──────────────────────────────────────────────┘
+               │
+       ┌───────┴────────┐
+       │                │
+       ▼                ▼
+┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+│  Document    │  │  Financial   │  │  Risk        │
+│  Processor   │  │  Analyst     │  │  Assessor    │
+│  (PaddleOCR) │  │  (ERNIE-4.5) │  │  Agent       │
+└──────┬───────┘  └──────┬───────┘  └──────┬───────┘
+       │                 │                 │
+       ▼                 ▼                 ▼
+┌──────────────┐  ┌──────────────┐  ┌──────────────┐
+│  Knowledge   │  │  News        │  │  Critic      │
+│  Manager     │  │  Monitor     │  │  Agent       │
+│  (RAG)       │  │  Agent       │  │  (QA)        │
+└──────────────┘  └──────────────┘  └──────────────┘
+       │                 │                 │
+       └─────────────────┴─────────────────┘
+                         │
+              Agent Communication Hub
+                (CAMEL BaseMessage)
 ```
+
+### Agent Communication Flow
+
+1. **User Request** → Orchestrator Agent
+2. **Orchestrator** decomposes task using CAMEL conversation
+3. **Agents execute in parallel** where possible (respecting dependencies)
+4. **Agents communicate** via CAMEL BaseMessage format
+5. **Critic validates** all outputs for quality
+6. **Orchestrator aggregates** results and returns final analysis
+
+See [CAMEL_INTEGRATION.md](CAMEL_INTEGRATION.md) for detailed implementation.
 
 ## 🚀 Quick Start
 

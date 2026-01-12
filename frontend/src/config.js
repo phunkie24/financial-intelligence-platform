@@ -6,8 +6,8 @@
 const isDevelopment = import.meta.env.DEV;
 
 // Backend URLs
-export const API_BASE_URL = isDevelopment 
-  ? 'http://127.0.0.1:8001'  // Local development
+export const API_BASE_URL = isDevelopment
+  ? 'http://127.0.0.1:8002'  // Local development
   : 'https://financial-intelligence-backend-production.up.railway.app';  // Production (update after Railway deployment)
 
 // API Endpoints

@@ -1,3 +1,4 @@
+# Databricks notebook source
 """
 Agent Message Hub - Central communication router for multi-agent system.
 
@@ -363,3 +364,7 @@ class AgentMessageHub:
 
     def __repr__(self) -> str:
         return f"<AgentMessageHub(agents={len(self.agents)}, topics={len(self.subscriptions)})>"
+
+
+# COMMAND ----------
+
